@@ -1,11 +1,17 @@
 import constant
 import os
 
-""" 
-function that receive folder path and return all the fills
-that start with the constant {START_WITH} = "deep"
-"""
 def find_deep_files(folder_path):
+    """
+    Returns a list of files in the given folder that start with the letters "deep".
+    Parameters:
+        folder_path (str): The path to the folder to search.
+    Returns:
+        A list of file names (strings) that start with the letters "deep".
+    Example:
+        >>> find_deep_files('/home/user/images')
+        ['deep1.jpg', 'deep2.png']
+    """
     files = [] # list to save the files name
     for filename in os.listdir(folder_path):
         if filename.startswith(constant.START_WITH):
